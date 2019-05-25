@@ -1,0 +1,19 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PWA - Lost In Cache - Lab-1</title>
+</head>
+<body>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/pwa-cache/lab-1/sw.js').then(reg => {
+    console.log('Service worker is registered in the following scope: ', reg.scope);
+  }).catch(err => {
+    console.log('Error registering service worker.', err);
+  });
+}
+</script>
+</body>
+</html>
